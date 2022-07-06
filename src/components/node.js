@@ -5,7 +5,7 @@ import Xarrow from 'react-xarrows';
 
 const canvasStyle = {
   position: 'relative',
-  height: '50vh',
+  height: '60vh',
   background: 'white',
   display: 'flex',
   justifyContent: 'space-evenly',
@@ -20,7 +20,7 @@ export default function Node(props) {
 
   return (
     <div style={canvasStyle} id="canvas">
-      <Fab disableRipple disableFocusRipple  id={'comp1'} color="success" variant="extended" 
+      <Fab style={{ height: "22%", width: "11%" }} id={'comp1'} color="success" 
         onMouseEnter={() => {
           setStep1("Time: 2.10 hrs");
         }}
@@ -29,17 +29,13 @@ export default function Node(props) {
         }}
       > Step 1 <br />
       {step1.length > 0 &&
-        <div style={{ fontSize: "8px" }}>
+        <div style={{ fontSize: "10px" }}>
           ({step1})
         </div>
       }
       </Fab>
 
-      {/* <svg style={{width: '8%',verticalAlign: 'middle'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-        <path style={{fill: "#232326"}} d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
-      </svg> */}
-
-      <Fab id={'comp2'} color="success" variant="circular" 
+      <Fab style={{ height: "22%", width: "11%" }} id={'comp2'} color="success" variant="circular" 
         onMouseEnter={() => {
           setStep2("Time: 4.05 hrs");
         }}
@@ -48,37 +44,37 @@ export default function Node(props) {
         }}
       > Step 2
       {step2.length > 0 &&
-        <div style={{ fontSize: "8px" }}>
+        <div style={{ fontSize: "10px" }}>
           ({step2})
         </div>
       }
       </Fab>
 
-      <Fab id={'comp3'} color="info" variant="circular"
+      <Fab style={{ height: "22%", width: "11%" }} id={'comp3'} color="info" variant="circular"
         onMouseEnter={() => {
-          setStep3("Time: 3.15 hrs");
+          setStep3("Waiting");
         }}
         onMouseLeave={() => {
           setStep3("");
         }}
       > Step 3
       {step3.length > 0 &&
-        <div style={{ fontSize: "8px" }}>
+        <div style={{ fontSize: "10px" }}>
           ({step3})
         </div>
       }
       </Fab>
 
-      <Fab id={'comp4'} color="info" variant="circular" 
+      <Fab style={{ height: "22%", width: "11%" }} id={'comp4'} color="info" variant="circular" 
         onMouseEnter={() => {
-          setStep4("Time: 1.50 hrs");
+          setStep4("Waiting");
         }}
         onMouseLeave={() => {
           setStep4("");
         }}
       > Step 4
       {step4.length > 0 &&
-        <div style={{ fontSize: "8px" }}>
+        <div style={{ fontSize: "10px" }}>
           ({step4})
         </div>
       }
